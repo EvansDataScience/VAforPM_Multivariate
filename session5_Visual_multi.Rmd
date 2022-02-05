@@ -281,7 +281,7 @@ dist_in_safe=dist(allIN[,-24]) #24 is city position
 d. Compute clusters
 
 With some many data, it would be useful to divide the cities into clusters. We could ask for 5 clusters:
-```{r}
+```{r, eval=TRUE}
 library(cluster)
 ResultFromPam= cluster::pam(x=dist_in_safe,
               k = 5, cluster.only = F)
@@ -298,7 +298,7 @@ head(theMap,10)
 ```
 
 Add them to data frame
-```{r}
+```{r, eval=TRUE}
 #add to dataframe
 allIN$dim1=theMap[,1]
 allIN$dim2=theMap[,2]
@@ -332,7 +332,7 @@ cityPointsText
 
 Let's use color as a factor:
 
-```{r}
+```{r, eval=TRUE}
 
 baseFactorCluster=ggplot(allIN,aes(x=dim1,y=dim2,
                        color=as.factor(cluster),
@@ -347,7 +347,7 @@ cityPointsText
 ```
 
 Would you like your own colors? ...becareful!
-```{r}
+```{r, eval=TRUE}
 cityPointsText+scale_color_manual(values = c("blue",'darkgreen','red','magenta','grey50'))
 ```
 
