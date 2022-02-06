@@ -12,7 +12,7 @@
 _____
 
 
-# Session 5: Tabular data: Multivariate data
+# Tabular data: Multivariate data
 
 
 _____
